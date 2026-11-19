@@ -1,35 +1,26 @@
-﻿# Dino 2D (Fantasy Forest Runner)
+﻿# Dino 2D (Dark Fantasy Forest Runner)
 
 Проект 2D-игры в стиле Runner на Unity 2022.3.62f3 LTS.
 
 ## Структура визуальных ассетов (Assets/ArtAssets/)
-Все элементы выполнены в пиксель-арт стилистике с именованием строго в стиле **PascalCase** и разбиты по тематическим подпапкам:
+Все элементы выполнены в пиксель-арт стилистике с прозрачным фоном, с именованием строго в стиле **PascalCase** и разбиты по категориям:
 
-- `Characters/` — спрайты главного героя:
+- `Characters/` — спрайты главного героя (Рыцарь):
   - `KnightIdle.png` — рыцарь в состоянии покоя
-  - `KnightRun1.png`, `KnightRun2.png` — покадровая анимация бега
-  - `KnightJump.png` — прыжок
-  - `KnightDuck.png` — приседание под препятствия
-- `Backgrounds/` — меняющийся фон (день / ночь):
-  - `Day/` — дневной сказочный лес:
-    - `SkyForestDay.png` — дневное небо
-    - `ForestTreesDay.png` — силуэты лесных деревьев
-    - `GroundForestDay.png` — травяная тропа
-  - `Night/` — ночной мистический лес:
-    - `SkyForestNight.png` — ночное небо
-    - `ForestTreesNight.png` — ночные деревья
-    - `MoonForestNight.png` — луна
-    - `FirefliesNight.png` — светящиеся светлячки
-    - `GroundForestNight.png` — ночная тропа
+  - `KnightRun1.png` ... `KnightRun5.png` — покадровая анимация бега (5 фаз)
+  - `KnightJump.png` — динамичный прыжок в верхней точке
+  - `KnightDuck.png` — полное приседание за щитом (также доступны промежуточные кадры `KnightDuck1` и `KnightDuck2`)
+- `Backgrounds/` — меняющийся фон (День / Ночь):
+  - `Day/ForestDay.png` — бесшовная панорама дневного сказочного леса с руинами замка и каменной дорожкой
+  - `Night/ForestNight.png` — та же панорама в ночном освещении с полной луной
 - `Enemies/` — 2 вида противников:
   - `Flying/` — летающий враг:
-    - `BatFly1.png`, `BatFly2.png` — пещерная летучая мышь с анимацией взмаха крыльев
-  - `Ground/` — наземные препятствия на пути:
-    - `MushroomMonster.png` — ядовитый гриб
-    - `SpikeTrap.png` — шипы ловушки
+    - `BatFly1.png`, `BatFly2.png` — пещерная летучая мышь со взмахами крыльев вверх и вниз
+  - `Ground/` — наземные препятствия:
+    - `MushroomMonster.png`, `MushroomMonsterAlt.png` — ядовитые зубастые лесные грибы
 
 ## Конвенция коммитов
 В проекте используется спецификация [Conventional Commits](https://www.conventionalcommits.org/):
-- `feat`: добавление ассетов и игровых компонентов
-- `chore`: настройка проекта и конфигурационных файлов
+- `feat(art)`: добавление графических ассетов
+- `chore(project)`: настройка проекта и конфигурации
 - `docs`: документация
